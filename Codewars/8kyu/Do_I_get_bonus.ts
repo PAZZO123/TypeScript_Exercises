@@ -5,4 +5,4 @@
       }
       return `£${salary}`
     }
- console.log(bonusTime(1000, true))
+ console.log(bonusTime(1000, true))//#10000
