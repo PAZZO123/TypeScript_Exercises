@@ -56,8 +56,11 @@ const menu :Pizza[]= [
  if(typeof identifier ==='string'){
     return menu.find(pizza=>pizza.name.toLowerCase()=== identifier.toLowerCase())
  }
- else{
+ else if(typeof identifier === 'number'){
     return menu.find(pizza=>pizza.id=== identifier)
+ }
+ else{
+    throw new Error('Parameters must be string or number enter a valid parameter')
  }
  }
  addNewPizza({id:5, name: "Chicken Bacon Ranch", price: 12 })
@@ -71,3 +74,5 @@ completeOrder(2)
 console.log("Menu:", menu)
 console.log("Cash in register:", cashInRegister)
 console.log("Order queue:", orderQueue)
+console.log(getPizzaDetails(2))
+console.log(getPizzaDetails(true))
