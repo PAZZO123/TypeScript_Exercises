@@ -28,11 +28,11 @@ const menu :Pizza[]= [
  let nextOrderId=1
  
  //function to add pizza in the menu
- function addNewPizza(pizza:Pizza){
+ function addNewPizza(pizza:Pizza):void{
      menu.push(pizza)
  }
  
- function placeOrder(Pizzas:string){
+ function placeOrder(Pizzas:string):Order|undefined{
      const orderedPizza=menu.find(pizzaObj=>pizzaObj.name===Pizzas)
      if(!orderedPizza){
         console.error('no such Pizza in the menu');
@@ -43,7 +43,7 @@ const menu :Pizza[]= [
      orderQueue.push(newOrder)
      return newOrder
  }
- function completeOrder(id:number){
+ function completeOrder(id:number):Order|undefined{
      const order=orderQueue.find(order=>order.id === id)
      if(!order){
         console.error(`Order with ${id} Is not available in menu`)
@@ -52,7 +52,7 @@ const menu :Pizza[]= [
      order.status='completed'
      return order
  }
- function getPizzaDetails(identifier:string|number){
+ function getPizzaDetails(identifier:string|number):Pizza|undefined{
  if(typeof identifier ==='string'){
     return menu.find(pizza=>pizza.name.toLowerCase()=== identifier.toLowerCase())
  }
