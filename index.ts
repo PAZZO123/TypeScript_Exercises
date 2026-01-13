@@ -11,6 +11,10 @@ type Pizza={
     price:number
     //address?:Address //optional properties
 }
+let cashInRegister=100
+ const orderQueue:Order[]=[]
+ let nextOrderId=1
+ let nextPizaId=1;
 type Status="ordered"|"completed"
 type Order={
     id:number
@@ -18,14 +22,12 @@ type Order={
     status:Status
 }
 const menu :Pizza[]= [
-    {id:1, name: "Margherita", price: 8 },
-    {id:2, name: "Pepperoni", price: 10 },
-    {id:3, name: "Hawaiian", price: 10 },
-    {id:4, name: "Veggie", price: 9 },
+    {id:nextPizaId++, name: "Margherita", price: 8 },
+    {id:nextPizaId++, name: "Pepperoni", price: 10 },
+    {id:nextPizaId++, name: "Hawaiian", price: 10 },
+    {id:nextPizaId++, name: "Veggie", price: 9 },
 ]
- let cashInRegister=100
- const orderQueue:Order[]=[]
- let nextOrderId=1
+ 
  
  //function to add pizza in the menu
  function addNewPizza(pizza:Pizza):void{
@@ -63,9 +65,9 @@ const menu :Pizza[]= [
     throw new Error('Parameters must be string or number enter a valid parameter')
  }
  }
- addNewPizza({id:5, name: "Chicken Bacon Ranch", price: 12 })
-addNewPizza({id:6, name: "BBQ Chicken", price: 12 })
-addNewPizza({id:7, name: "Spicy Sausage", price: 11 })
+ addNewPizza({id:nextPizaId++, name: "Chicken Bacon Ranch", price: 12 })
+addNewPizza({id:nextPizaId++, name: "BBQ Chicken", price: 12 })
+addNewPizza({id:nextPizaId++, name: "Spicy Sausage", price: 11 })
 
 placeOrder("Chicken Bacon Ranch")
 completeOrder(1)
@@ -75,4 +77,4 @@ console.log("Menu:", menu)
 console.log("Cash in register:", cashInRegister)
 console.log("Order queue:", orderQueue)
 console.log(getPizzaDetails(2))
-console.log(getPizzaDetails(true))
+//console.log(getPizzaDetails(true))
