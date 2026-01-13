@@ -22,3 +22,4 @@
     "strictNullChecks": true
   }
 }
+//tsc index.ts --lib ES2015,DOM

@@ -30,8 +30,15 @@ const menu :Pizza[]= [
  
  
  //function to add pizza in the menu
- function addNewPizza(pizza:Pizza):void{
-     menu.push(pizza)
+ function addNewPizza(pizza:Omit<Pizza,'id'>):Pizza{
+    let addedPizza:Pizza={
+        id:nextPizaId++,
+        ...pizza
+
+    }
+     menu.push(addedPizza)
+     return addedPizza
+
  }
  
  function placeOrder(Pizzas:string):Order|undefined{
@@ -54,6 +61,7 @@ const menu :Pizza[]= [
      order.status='completed'
      return order
  }
+ //Get Pizza detail function
  function getPizzaDetails(identifier:string|number):Pizza|undefined{
  if(typeof identifier ==='string'){
     return menu.find(pizza=>pizza.name.toLowerCase()=== identifier.toLowerCase())
@@ -65,9 +73,13 @@ const menu :Pizza[]= [
     throw new Error('Parameters must be string or number enter a valid parameter')
  }
  }
- addNewPizza({id:nextPizaId++, name: "Chicken Bacon Ranch", price: 12 })
-addNewPizza({id:nextPizaId++, name: "BBQ Chicken", price: 12 })
-addNewPizza({id:nextPizaId++, name: "Spicy Sausage", price: 11 })
+ //Update Users Function
+ function updateUser(id:number, updates:any){
+
+ }
+ addNewPizza({ name: "Chicken Bacon Ranch", price: 12 })
+addNewPizza({ name: "BBQ Chicken", price: 12 })
+addNewPizza({ name: "Spicy Sausage", price: 11 })
 
 placeOrder("Chicken Bacon Ranch")
 completeOrder(1)
