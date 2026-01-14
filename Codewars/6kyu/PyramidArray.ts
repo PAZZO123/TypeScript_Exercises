@@ -9,3 +9,5 @@
   }
     return result;
 }
+//test cases
+console.log(pyramid(3))
