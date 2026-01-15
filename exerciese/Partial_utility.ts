@@ -5,4 +5,4 @@ interface Point{
 
 let Angle:Partial<Point>={
 }
-console.log(Angle)
+console.log(Angle)//{}
