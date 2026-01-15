@@ -10,4 +10,4 @@
     return result;
 }
 //test cases
-console.log(pyramid(3))
+console.log(pyramid(3))//[[1],[1,1],[1,1,1]]
