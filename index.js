@@ -58,16 +58,25 @@ function getPizzaDetails(identifier) {
     }
 }
 //Update Users Function
-function updateUser(id, updates) {
+function addToArray(array, item) {
+    array.push(item);
+    return array;
 }
-addNewPizza({ name: "Chicken Bacon Ranch", price: 12 });
-addNewPizza({ name: "BBQ Chicken", price: 12 });
-addNewPizza({ name: "Spicy Sausage", price: 11 });
-placeOrder("Chicken Bacon Ranch");
-completeOrder(1);
-completeOrder(2);
+// example usage:
+addToArray(menu, { id: nextPizaId++, name: "Chicken Bacon Ranch", price: 12 });
+var pizza = menu[2];
+if (!pizza) {
+    throw new Error("Pizza not found in menu");
+}
+addToArray(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed" });
+//  addNewPizza({ name: "Chicken Bacon Ranch", price: 12 })
+// addNewPizza({ name: "BBQ Chicken", price: 12 })
+// addNewPizza({ name: "Spicy Sausage", price: 11 })
+// placeOrder("Chicken Bacon Ranch")
+// completeOrder(1)
+// completeOrder(2)
 console.log("Menu:", menu);
 console.log("Cash in register:", cashInRegister);
 console.log("Order queue:", orderQueue);
-console.log(getPizzaDetails(2));
+//console.log(getPizzaDetails(2))
 //console.log(getPizzaDetails(true))
