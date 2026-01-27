@@ -1,5 +1,5 @@
 type CarYear=string
-type CarName=String
+type CarName=string
 type CarPrice=number
 
 type Car={
@@ -16,3 +16,17 @@ const Toyota:Car={
     price:carPrice
 }
 console.log(Toyota)//{ name: 'Volvo', year: '2024', price: 400 }
+
+
+
+
+//type alliases and type merging 
+type UserName={username:string}
+type Password={password:string}
+type isPaid={ispaid:boolean}
+type User=UserName & Password & isPaid & {
+email:string
+}
+let getUser=(user:User):User=>user
+
+getUser({username:'patrick',password:'abcdfnn',ispaid:true,email:'ddn'})

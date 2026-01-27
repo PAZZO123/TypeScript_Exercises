@@ -4,4 +4,4 @@ const car:{name:string, year?:string, price:number}={
     price:3000
 }
 
-console.log(car.name)//Volvo
+console.log(car.name)//Volvokkk
