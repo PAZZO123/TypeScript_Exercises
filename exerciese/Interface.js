@@ -1,4 +1,6 @@
-var user = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let user = {
     dbid: 2389,
     username: 'Patrick',
     email: 'ppp@gmail.com',
@@ -6,9 +8,10 @@ var user = {
     price: 23,
     role: 'SuperAdmin',
     githubToken: crypto.randomUUID(),
-    startTrials: function () { return "Trial has started Already!"; },
-    getCoupon: function (name, off) { return (off / 100) * user.price; }
+    startTrials: () => `Trial has started Already!`,
+    getCoupon: (name, off) => (off / 100) * user.price
 };
 //user.dbid=2334;
 console.log(user);
 console.log(user.getCoupon('Pazzo', 10));
+//# sourceMappingURL=Interface.js.map
