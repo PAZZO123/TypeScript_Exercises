@@ -25,4 +25,16 @@ class User {
         this.courseCount = newCount;
     }
 }
+//Inhertance
+class SubUser extends User {
+    isFamily = true;
+    changeCount() {
+        this.courseCount = 4;
+    }
+}
+let patty = new User("Patrick", "p@p.com");
+//patty.deleteToken()
+patty.getAppleEmail;
+patty.courseCounts;
+patty.CourseCount = 50;
 //# sourceMappingURL=Classes.js.map
