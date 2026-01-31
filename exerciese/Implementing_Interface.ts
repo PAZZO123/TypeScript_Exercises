@@ -10,7 +10,7 @@ interface Story {
 
 class Instagram implements TakePhoto{
     constructor(
-        public cameraMode:string,
+        public cameraMode:string,//here
         public filter:string,
         public burst:number
     ){}
