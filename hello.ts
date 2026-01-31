@@ -1,7 +1,7 @@
 function greet(name: string): string {
   return `Hello, ${name}!`;
 }
-let isActive:boolean=true;
+let isActive:boolean=true;//here
 
 let message: string = greet("World");
 console.log(message+" Is "+isActive);
