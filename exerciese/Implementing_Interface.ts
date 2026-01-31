@@ -20,7 +20,7 @@ class YouToube implements TakePhoto, Story{
         public cameraMode:string,
         public filter:string,
         public burst:number,
-        private detector:string
+        private detector:string//detector
     ){}
     createStory(): void {
         console.log("Story was Created Sucessfully!")
