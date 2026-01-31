@@ -9,5 +9,5 @@ function stringExpansion(s:string):string{
   }).join('')
 }
 
-console.log(stringExpansion("3bnmjsjs"))//bbbnnnmmmjjjsssjjjsss
+console.log(stringExpansion("3bnmjsjs"))//bbbnnnmmmjjjuiijsssjjjsss
 
