@@ -4,7 +4,8 @@ class Instagram {
     cameraMode;
     filter;
     burst;
-    constructor(cameraMode, filter, burst) {
+    constructor(cameraMode, //here
+    filter, burst) {
         this.cameraMode = cameraMode;
         this.filter = filter;
         this.burst = burst;
@@ -15,7 +16,8 @@ class YouToube {
     filter;
     burst;
     detector;
-    constructor(cameraMode, filter, burst, detector) {
+    constructor(cameraMode, filter, burst, detector //detector
+    ) {
         this.cameraMode = cameraMode;
         this.filter = filter;
         this.burst = burst;
